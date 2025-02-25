@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classification in Machine Learning</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression in Machine Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for visualization -->
 </head>
 <body>
-  <header>
-    <h1>Classification in Machine Learning</h1>
-    <p>Learn about K-Nearest Neighbors (KNN) and Logistic Regression!</p>
-  </header>
+    <header>
+        <h1>Regression in Machine Learning</h1>
+    </header>
 
-  <section id="classification">
-    <h2>What is Classification?</h2>
-    <p>Classification is a supervised learning technique used to categorize data into predefined classes.</p>
-  </section>
+    <section id="intro">
+        <h2>What is Regression?</h2>
+        <p>Regression is a machine learning technique used to predict continuous values. It finds relationships between independent and dependent variables.</p>
+        <ul>
+            <li><b>Linear Regression:</b> Predicts a straight-line relationship.</li>
+            <li><b>Polynomial Regression:</b> Fits a curve to the data.</li>
+            <li><b>Logistic Regression:</b> Used for classification.</li>
+        </ul>
+    </section>
 
-  <section id="knn">
-    <h2>K-Nearest Neighbors (KNN)</h2>
-    <p>KNN is a simple, instance-based learning algorithm that classifies data points based on their proximity to neighboring points.</p>
-    <div>
-      <label for="kValue">Number of Neighbors (k):</label>
-      <input type="number" id="kValue" min="1" value="3">
-    </div>
-    <div id="knn-visualization">
-      <canvas id="knnCanvas" width="400" height="400"></canvas>
-    </div>
-    <button onclick="classifyWithKNN()">Classify with KNN</button>
-    <button onclick="resetKNN()">Reset</button>
-  </section>
+    <section id="graph">
+        <h2>Interactive Visualization</h2>
+        <p>The graph below shows house prices predicted based on square footage.</p>
+        <canvas id="regressionChart"></canvas>
+    </section>
 
-  <section id="logistic-regression">
-    <h2>Logistic Regression</h2>
-    <p>Logistic Regression is a statistical method used for binary classification by modeling the probability of a binary outcome.</p>
-    <div id="lr-visualization">
-      <canvas id="lrCanvas" width="400" height="400"></canvas>
-    </div>
-    <button onclick="trainLogisticRegression()">Train Logistic Regression</button>
-    <button onclick="resetLR()">Reset</button>
-  </section>
+    <section id="example">
+        <h2>Real-World Applications</h2>
+        <p>Regression is widely used in:</p>
+        <ul>
+            <li>Predicting house prices based on size, location, and features.</li>
+            <li>Forecasting sales in businesses.</li>
+            <li>Medical research for disease prediction.</li>
+        </ul>
+    </section>
 
-  <footer>
-    <p>Created with ❤️ by [Your Name]</p>
-  </footer>
+    <section id="quiz">
+        <h2>Practice Questions</h2>
+        <p>Test your knowledge:</p>
+        <p>1. Which type of regression is used for predicting continuous values?</p>
+        <button onclick="checkAnswer(1, 'Linear Regression')">Linear Regression</button>
+        <button onclick="checkAnswer(1, 'Logistic Regression')">Logistic Regression</button>
+        <p id="result1"></p>
 
-  <script src="script.js"></script>
+        <p>2. What is an example of regression in real life?</p>
+        <button onclick="checkAnswer(2, 'Predicting house prices')">Predicting house prices</button>
+        <button onclick="checkAnswer(2, 'Sorting emails')">Sorting emails</button>
+        <p id="result2"></p>
+    </section>
+
+    <section id="resources">
+        <h2>Additional Resources</h2>
+        <p>Learn more about regression:</p>
+        <ul>
+            <li><a href="https://www.ibm.com/topics/regression-analysis" target="_blank">IBM: Regression Analysis</a></li>
+            <li><a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank">Kaggle: Intro to ML</a></li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script> <!-- JavaScript File -->
 </body>
 </html>
